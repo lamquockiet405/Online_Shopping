@@ -1,0 +1,131 @@
+.desktop-nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: #3b82f6;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.75rem;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    width: 12rem;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-link:hover {
+    background-color: #f3f4f6;
+    color: #3b82f6;
+  }
+  
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mobile-nav-item {
+    width: 100%;
+  }
+  
+  .mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .mobile-nav-link:hover {
+    color: #3b82f6;
+  }
+  
+  .mobile-dropdown-toggle {
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  
+  .mobile-dropdown {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mobile-dropdown-link {
+    display: block;
+    padding: 0.25rem 0;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  
+  .mobile-dropdown-link:hover {
+    color: #3b82f6;
+  }
+  
+.nav-link, .mobile-nav-link {
+  position: relative;
+}
+.nav-link::after, .mobile-nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.nav-link:hover::after, .mobile-nav-link:hover::after {
+  width: 100%;
+}
+  

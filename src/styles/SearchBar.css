@@ -1,0 +1,108 @@
+.search-form {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+  }
+  
+  .search-container.focused {
+    box-shadow: 0 0 0 2px #3b82f6;
+    border-radius: 9999px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    color: #9ca3af;
+    z-index: 10;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    background-color: #f9fafb;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .search-input:focus {
+    background-color: white;
+    border-color: #3b82f6;
+  }
+  
+  .clear-btn {
+    position: absolute;
+    right: 0.75rem;
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: background-color 0.2s;
+  }
+  
+  .clear-btn:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.25rem;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 0.5rem;
+  }
+  
+  .suggestions-header {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .suggestion-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+    position: relative;
+  }
+  .suggestion-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .suggestion-item:hover::after {
+    width: 100%;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f3f4f6;
+  }
+  

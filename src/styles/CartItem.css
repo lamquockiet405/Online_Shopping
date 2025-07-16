@@ -1,0 +1,124 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .cart-item-image {
+    flex-shrink: 0;
+  }
+  
+  .cart-item-image img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .cart-item-details h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .item-attributes {
+    margin: 0.25rem 0;
+  }
+  
+  .item-attributes p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .item-price {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .quantity-btn {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .quantity-btn:hover:not(:disabled) {
+    background-color: #f3f4f6;
+  }
+  
+  .quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .quantity-display {
+    width: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .item-total {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937;
+    min-width: 6rem;
+    text-align: right;
+  }
+  
+  .remove-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+  }
+  
+  .remove-btn:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  .remove-btn::after {
+    content: "✖";
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.3s;
+    color: #dc2626;
+  }
+  .remove-btn:hover::after {
+    transform: translateY(-50%) scale(1);
+  }
+  
